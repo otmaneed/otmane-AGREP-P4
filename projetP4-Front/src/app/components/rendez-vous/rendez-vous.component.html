@@ -1,0 +1,34 @@
+<h1 style="text-align:center;">Rendez-vous</h1>
+<button type="button" class="btn btn-info btn-lg btn-block">Les praticiens disponibles</button>
+<button type="button" class="btn btn-info btn-lg btn-block">Agenda des Rendez-vous</button>
+<form>
+  <h4 style="text-align:center;">Prise de rendez-vous</h4>
+  <div class="row">
+    <div class="col">
+      <label for="date">La date souhaité*</label>
+      <input type="datetime" class="form-control" placeholder="datetime">
+    </div>
+    <div class="col">
+      <label for="lname">N° d'ordre*</label>
+      <input type="number" class="form-control" placeholder="nombre">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="CIN">ID Patient*</label>
+      <input type="text" class="form-control" placeholder="">
+    </div>
+    <div class="col">
+      <label for="TEL">ID Praticien*</label>
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="comment">Description</label>
+    <textarea class="form-control" rows="2" id="comment"></textarea>
+  </div>
+  <button class="btn btn-info" type="button" disabled>
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Loading...
+  </button>
+</form>

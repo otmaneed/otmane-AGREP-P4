@@ -1,0 +1,13 @@
+.dctr {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card-img-top {
+  height: 300px;
+}

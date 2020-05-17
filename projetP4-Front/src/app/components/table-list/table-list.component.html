@@ -1,0 +1,77 @@
+<div class="main-content m-5">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="card card-plain mb-0">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title mt-0"> Liste des admins</h4>
+            <p class="card-category"> Détail a propos des Journalistes dans le site web</p>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead class="">
+
+                  <th>
+                    Nom
+                  </th>
+                  <th>
+                    id
+                  </th>
+                  <th>
+                    role
+                  </th>
+
+
+                </thead>
+                <tbody *ngFor="let admin of admins">
+                  <tr>
+
+
+                    <td>
+                      {{admin.username}}
+                    </td>
+                    <td>
+                      {{admin.id}}
+                    </td>
+                    <td>
+                      {{admin.role.label}}
+                    </td>
+
+                    <td>
+                      <i (click)="editeAdmin(admin)" class="fa fa-edit mr-3 btn btn-info float-right">
+                        Edite</i>
+                      <div class="row s12 col">
+                        <div class="row" *ngIf="statutAdmin && admin.id ==  myAdmin.id">
+                          <button class="btn btn-info" (click)="modifierAdmin(admin.id , admin)">update</button>
+                          <div class="col s12 m6 input-field">
+                            <label for="username">username</label>
+                            <input class="form-control" name="duree" [(ngModel)]="admin.duree" type="text">
+                          </div>
+                          <div class="col s12 m6 input-field">
+                            <label for="password">password</label>
+                            <input class="form-control" name="password" [(ngModel)]="admin.password" type="password">
+                          </div>
+                          <div class="col s12 m6 input-field">
+                            <label for="role">role</label>
+                            <input class="form-control" name="role" [(ngModel)]="admin.role" type="number">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="" (click)=" suprimerAdmin(admin.id)"><i
+                          class="fa fa-delete mr-3 btn btn-danger">suprimer</i></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
